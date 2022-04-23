@@ -1,0 +1,285 @@
+package chap4;
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+
+public class BmiGUI extends javax.swing.JFrame {
+
+    
+    public BmiGUI() {
+        initComponents();
+    }
+
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtWeight = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtHeight = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        btnCalculate = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        btnClear = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
+        lblResult = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel1.setText("น้ำหนักและส่วนสูง");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("น้ำหนัก");
+
+        txtWeight.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtWeightKeyTyped(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setText("กิโลกรัม");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setText("ความสูง");
+
+        txtHeight.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtHeightKeyTyped(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setText("เซนติเมตร");
+
+        btnCalculate.setBackground(new java.awt.Color(204, 204, 255));
+        btnCalculate.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
+        btnCalculate.setForeground(new java.awt.Color(0, 0, 204));
+        btnCalculate.setText("คำนวณ");
+        btnCalculate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculateActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setText("ผล");
+
+        btnClear.setBackground(new java.awt.Color(204, 204, 255));
+        btnClear.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(0, 0, 204));
+        btnClear.setText("CLEAR");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
+
+        btnExit.setBackground(new java.awt.Color(204, 204, 255));
+        btnExit.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(0, 0, 204));
+        btnExit.setText("EXIT");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
+        lblResult.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        lblResult.setOpaque(true);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(156, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(149, 149, 149))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnCalculate)
+                        .addGap(52, 52, 52)
+                        .addComponent(btnClear)
+                        .addGap(50, 50, 50)
+                        .addComponent(btnExit))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(63, 63, 63)
+                        .addComponent(lblResult, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel3)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel1)
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate)
+                    .addComponent(btnClear)
+                    .addComponent(btnExit))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(lblResult, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(143, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        int option = JOptionPane.showConfirmDialog(rootPane, "Do you want to Exit ?");
+        if (option == JOptionPane.YES_OPTION){
+            System.exit(0);        
+        }
+                          
+    }                                       
+
+    private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        DecimalFormat df = new DecimalFormat("#.#");
+         float bmi = 0;
+         String weights = txtWeight.getText();
+         String heinghts = txtHeight.getText();
+         if (weights.length()>0 && heinghts.length()>0) {
+            float weight = Float.parseFloat(weights);
+            float Height = Float.parseFloat(heinghts);
+            bmi = weight / ((Height/100) * (Height/100));
+            bmi = Float.parseFloat(df.format(bmi));
+            if (bmi >=18.5 && bmi<23) {
+                 lblResult.setText("ปกติ");
+                 lblResult.setBackground(new java.awt.Color(102,255,102));
+             } else if (bmi >=23 && bmi<25) {
+                 lblResult.setText("ท้วม");
+                 lblResult.setBackground(new java.awt.Color(255,255,102));
+             } else if ( bmi >=25 && bmi<30) {
+                 lblResult.setText("อ้วนระดับ  1");
+                 lblResult.setBackground(new java.awt.Color(255,102,204));
+             } else     if (bmi >=30) {
+                 lblResult.setText("อ้วนระดับ  2");
+                 lblResult.setBackground(new java.awt.Color(246,154,205));
+             } else {
+                 lblResult.setText("ผอม");
+                 lblResult.setBackground(new java.awt.Color(153,255,204));
+             }
+         }else{
+             JOptionPane.showConfirmDialog(rootPane, "กรุณากรอกข้อมูลให้ครบถ้วนก่อนครับ");
+         }
+
+                                              
+
+    }                                            
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtWeight.setText("");
+        txtHeight.setText("");
+        lblResult.setText("");
+        lblResult.setBackground(new java.awt.Color(215,218,218));
+        
+        
+    }                                        
+
+    private void txtWeightKeyTyped(java.awt.event.KeyEvent evt) {                                   
+         char c = evt.getKeyChar();
+        if (!(( c >='0') && (c <=  '9') || (c == '.') 
+                || (c == java.awt.event.KeyEvent.VK_BACK_SPACE)
+                || (c == java.awt.event.KeyEvent.VK_DELETE))) {
+            getToolkit().beep();
+            evt.consume();
+        }      
+    }                                  
+
+    private void txtHeightKeyTyped(java.awt.event.KeyEvent evt) {                                   
+        char c = evt.getKeyChar();
+        if (!(( c >='0') && (c <=  '9') || (c == '.') 
+                || (c == java.awt.event.KeyEvent.VK_BACK_SPACE)
+                || (c == java.awt.event.KeyEvent.VK_DELETE))) {
+            getToolkit().beep();
+            evt.consume();
+        }
+    }                                  
+
+    
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(BmiGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(BmiGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(BmiGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(BmiGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new BmiGUI().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton btnCalculate;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel lblResult;
+    private javax.swing.JTextField txtHeight;
+    private javax.swing.JTextField txtWeight;
+    // End of variables declaration                   
+}
