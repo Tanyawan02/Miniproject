@@ -1,0 +1,611 @@
+package chap4;
+
+import javax.swing.JOptionPane;
+
+public class HeightGUI extends javax.swing.JFrame {
+
+    public HeightGUI() {
+        initComponents();
+    }
+
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jLabel1 = new javax.swing.JLabel();
+        rdoMan = new javax.swing.JRadioButton();
+        rdoFemale = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtAge = new javax.swing.JTextField();
+        txtHeight = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        btnCalculate = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        txtResult = new javax.swing.JTextField();
+        btnExit = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Thai Childen Height");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel1.setText("วัดความสูงเด็กไทย");
+
+        buttonGroup1.add(rdoMan);
+        rdoMan.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        rdoMan.setText("ชาย");
+
+        buttonGroup1.add(rdoFemale);
+        rdoFemale.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        rdoFemale.setText("หญิง");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setText("เพศ");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setText("อายุ");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setText("ความสูง");
+
+        txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAgeKeyTyped(evt);
+            }
+        });
+
+        txtHeight.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtHeightKeyTyped(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setText("ปี");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setText("เซนติเมตร");
+
+        btnCalculate.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnCalculate.setText("คำนวณ");
+        btnCalculate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculateActionPerformed(evt);
+            }
+        });
+
+        btnClear.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnClear.setText("Clear");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("ผลการวัดความสูง");
+
+        btnExit.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(127, 127, 127))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4))
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(rdoMan)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rdoFemale))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jLabel6))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(31, 31, 31)
+                                        .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel7)))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(0, 358, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(txtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(113, 113, 113)
+                .addComponent(btnCalculate)
+                .addGap(47, 47, 47)
+                .addComponent(btnClear)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addComponent(btnExit)
+                .addGap(50, 50, 50))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel1)
+                .addGap(72, 72, 72)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rdoMan)
+                    .addComponent(rdoFemale)
+                    .addComponent(jLabel3))
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel5)
+                    .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(102, 102, 102)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate)
+                    .addComponent(btnClear)
+                    .addComponent(btnExit))
+                .addGap(50, 50, 50)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(txtResult, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                .addGap(25, 25, 25))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {                                             
+         String age = txtAge.getText();
+        String height = txtHeight.getText();
+        
+        int ages = Integer.valueOf(age);
+        int hei = Integer.valueOf(height);
+        if (rdoMan.isSelected()) { //Man
+            switch (ages) {
+                case 5:
+                     if (hei <= 105) {
+                        txtResult.setText("เตี้ย");
+                    } else if(hei >= 115 && hei <= 120){
+                        txtResult.setText("สูง");
+                    } else if(hei >=106 && hei <=114){
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+             case 6: if (hei <= 112) {
+                        txtResult.setText("เตี้ย");
+                    } else if(hei >= 118 && hei <= 125){
+                        txtResult.setText("สูง");
+                    } else if(hei >=113 && hei <=117){
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+             case 7:
+                    if (hei <= 117) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 125 && hei <= 132) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 118 && hei <= 124) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+             case 8:
+                    if (hei <= 122) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 136 && hei <= 145) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 123 && hei <= 135) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+              case 9:
+                    if (hei <= 126) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 142 && hei <= 152) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 127 && hei <= 141) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break; 
+                    
+             case 10:
+                    if (hei <= 132) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 146 && hei <= 158) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 133 && hei <= 145) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break; 
+                    
+             case 11:
+                    if (hei <= 136) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 158 && hei <= 163) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 137 && hei <= 157) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break; 
+                    
+             case 12:
+                    if (hei <= 142) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 162 && hei <= 168) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 143 && hei <= 161) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                    
+             case 13:
+                    if (hei <= 146) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 165 && hei <= 170) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 147 && hei <= 164) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+              case 14:
+                    if (hei <= 150) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 172 && hei <= 175) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 151 && hei <= 171) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                    
+                    case 15:
+                    if (hei <= 157) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 177 && hei <= 185) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 158 && hei <= 176) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                    
+                    case 16:
+                    if (hei <= 160) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 181 && hei <= 187) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 161 && hei <= 180) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                    
+                    case 17:
+                    if (hei <= 163) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 183 && hei <= 189) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 164 && hei <= 182) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                    
+                    case 18:
+                    if (hei <= 165) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 185 && hei <= 188) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 166 && hei <= 184) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                    
+                    case 19:
+                    if (hei <= 165) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 187 && hei <= 190) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 166 && hei <= 186) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                    
+                    case 20:
+                    if (hei <= 165) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 188 && hei <= 192) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 166 && hei <= 187) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(rootPane, "ป้อนอายุใหม่");
+                    break;
+            }
+              } else if (rdoFemale.isSelected()) { 
+            switch (ages) {
+                case 5:
+                    if (hei <= 105) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei < 115 || hei > 120) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 106 && hei <= 114) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                case 6:
+                    if (hei <= 110) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 118 && hei <= 123) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 106 && hei <= 117) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 7:
+                    if (hei <= 117) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 125 && hei <= 132) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 118 && hei <= 122) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                case 8:
+                    if (hei <= 123) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 137 && hei <= 145) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 124 && hei <= 136) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 9: if (hei <= 128) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 145 && hei <= 150) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 129 && hei <= 144) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 10:
+                    if (hei <= 132) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 147 && hei <= 152) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 133 && hei <= 146) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                case 11:
+                    if (hei <= 137) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 153 && hei <= 162) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 138 && hei <= 152) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 12:
+                    if (hei <= 145) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 157 && hei <= 165) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 146 && hei <= 156) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 13:
+                    if (hei <= 149) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 163 && hei <= 168) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 150 && hei <= 162) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                case 14:
+                    if (hei <= 152) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 165 && hei <= 170) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 153 && hei <= 164) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 15:
+                    if (hei <= 155) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 167 && hei <= 175) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 156 && hei <= 166) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                case 16:
+                    if (hei <= 157) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 170 && hei <= 173) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 158 && hei <= 169) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 17:
+                    if (hei <= 157) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 171 && hei <= 173) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 158 && hei <= 170) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                case 18:
+                    if (hei <= 158) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 172 && hei <= 175) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 159 && hei <= 171) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+
+                case 19:
+                    if (hei <= 159) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 172 && hei <= 177) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 160 && hei <= 171) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+                 case 20:
+                    if (hei <= 160) {
+                        txtResult.setText("เตี้ย");
+                    } else if (hei >= 172 && hei <= 179) {
+                        txtResult.setText("สูง");
+                    } else if (hei >= 161 && hei <= 171) {
+                        txtResult.setText("สมส่วน");
+                    }
+                    break;
+            }
+            } else if (rdoFemale.isSelected()) {
+            switch (ages) {
+            }
+        }           
+    
+              
+
+
+
+                    
+
+        
+        
+        
+        
+        
+    }                                            
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtAge.setText("");
+        txtHeight.setText("");
+        txtResult.setText("");
+    }                                        
+
+    private void txtAgeKeyTyped(java.awt.event.KeyEvent evt) {                                
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == java.awt.event.KeyEvent.VK_BACK_SPACE)
+                || (c == java.awt.event.KeyEvent.VK_DELETE))) {
+            getToolkit().beep();
+            evt.consume();
+        }
+    }                               
+
+    private void txtHeightKeyTyped(java.awt.event.KeyEvent evt) {                                   
+         char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == java.awt.event.KeyEvent.VK_BACK_SPACE)
+                || (c == java.awt.event.KeyEvent.VK_DELETE))) {
+            getToolkit().beep();
+            evt.consume();
+        }
+    }                                  
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        int option = JOptionPane.showConfirmDialog(rootPane, "Do you want to Exit ?");
+        if (option == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }                                       
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(HeightGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(HeightGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(HeightGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(HeightGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new HeightGUI().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton btnCalculate;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnExit;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JRadioButton rdoFemale;
+    private javax.swing.JRadioButton rdoMan;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JTextField txtHeight;
+    private javax.swing.JTextField txtResult;
+    // End of variables declaration                   
+}
