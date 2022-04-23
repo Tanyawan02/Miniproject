@@ -57,6 +57,11 @@ public class ExchangeMoneyGUI extends javax.swing.JFrame {
         jLabel2.setText("จำนวนเงิน");
 
         txtMoney.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtMoney.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMoneyActionPerformed(evt);
+            }
+        });
         txtMoney.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtMoneyKeyTyped(evt);
@@ -328,58 +333,53 @@ public class ExchangeMoneyGUI extends javax.swing.JFrame {
                 money = money % 1000;
                 
             }
-        if (money >= 500) {
-            bank500 = "" + (money / 500);
-            money = money % 500;
-            
-        }
-        if (money >= 100) {
-            bank100 = "" + (money / 100);
-            money = money % 100;
-            
-        }
-        if (money >= 50) {
-            bank50 = "" + (money / 50);
-            money = money % 50;
-            
-        }
-        if (money >= 20) {
-            bank20 = "" + (money / 20);
-            money = money % 20;
-            
-        }if (money >= 10) {
-            coin10 = "" + (money / 10);
-            money = money % 10;
-            
-        }
-        if (money >= 5) {
-            coin5 = "" + (money / 5);
-            money = money % 5;
-            
-        }if (money >= 2) {
-            coin2 = "" + (money / 2);
-            money = money % 2;
-            
-        }
-        if (money >= 1) {
-            coin1 = "" + (money / 1);
-            money = (money / 1);
-            
-        }
+            if (money >= 500) {
+                bank500 = "" + (money / 500);
+                money = money % 500;
+            }
+            if (money >= 100) {
+                bank100 = "" + (money / 100);
+                money = money % 100;
+            }
+            if (money >= 50) {
+                bank50 = "" + (money / 50);
+                money = money % 50;
+            }
+            if (money >= 20) {
+                bank20 = "" + (money / 20);
+                money = money % 20;
+            }
+            if (money >= 10) {
+                coin10 = "" + (money / 10);
+                money = money % 10;
+            }
+if (money >= 5) {
+                coin5 = "" + (money / 5);
+                money = money % 5;
+            }
+            if (money >= 2) {
+                coin2 = "" + (money / 2);
+                money = money % 2;
+            }
+            if (money >= 1) {
+                coin1 = "" + (money / 1);
+            }
         
             
-        }
+        
         txt1000.setText(bank1000);
         txt500.setText(bank500);
         txt100.setText(bank100);   
-        txt50.setText(bank100);   
-        txt20.setText(bank50);   
-        txt10.setText(bank20);   
-        txt5.setText(coin10);   
-        txt2.setText(coin5);   
-        txt1.setText(coin2);   
+        txt50.setText(bank50);   
+        txt20.setText(bank20);   
+        txt10.setText(coin10);   
+        txt5.setText(coin5);   
+        txt2.setText(coin2);   
         txt1.setText(coin1);   
         
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "กรุณาระบุจำนวนเงินครับ");
+        }
         
         
     }                                              
@@ -397,6 +397,19 @@ public class ExchangeMoneyGUI extends javax.swing.JFrame {
             evt.consume();
         }
     }                                 
+
+    private void txtMoneyActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txt1000.setText("");
+        txt500.setText("");
+        txt100.setText("");   
+        txt50.setText("");   
+        txt20.setText("");   
+        txt10.setText("");   
+        txt5.setText("");   
+        txt2.setText("");   
+        txt1.setText("");   
+        txtMoney.setText("");   
+    }                                        
 
     /**
      * @param args the command line arguments
@@ -432,3 +445,41 @@ public class ExchangeMoneyGUI extends javax.swing.JFrame {
             }
         });
     }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton btnChangeMoney;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField txt1;
+    private javax.swing.JTextField txt10;
+    private javax.swing.JTextField txt100;
+    private javax.swing.JTextField txt1000;
+    private javax.swing.JTextField txt2;
+    private javax.swing.JTextField txt20;
+    private javax.swing.JTextField txt5;
+    private javax.swing.JTextField txt50;
+    private javax.swing.JTextField txt500;
+    private javax.swing.JTextField txtMoney;
+    // End of variables declaration                   
+}
